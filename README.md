@@ -24,7 +24,7 @@ or
 ```
 - to remove everything on page and show sms / to modify the webpage
 
-```
+```js
 document.body.innerHTML = 'hello';
 ```
 
