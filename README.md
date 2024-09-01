@@ -106,8 +106,8 @@ Math.ceil(2.2)
 ```
 - we can see the type of any value
 ```js
-typeof 3
-typeof 'hello'
+typeof 3 //number
+typeof 'hello' //string
 ```
 - we can add number and string
 
@@ -129,7 +129,7 @@ alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
      - escape character = \\'
      - escape character = \\"
      - escape character = \\n //new line character
-  - backtick = template string = // \`....\`
+  - backtick = template string =\`....\`
     - interpolation = insert value directly into string
     ```js
     `Items(${1+1}): $${(2095+799)/100}`
