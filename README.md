@@ -183,4 +183,6 @@ Thank you, come again!`
 - newline also count as converted space
 - webpage is a single page of website
 - CSS = Cascading Style Sheets
+- Attribute changes the behavior of an element
+- onclick = whenever we click the element
 
