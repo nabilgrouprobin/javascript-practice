@@ -52,4 +52,6 @@ alert('Abdur Rouf Robin');
     ```js
     Math.round(2.2)
     Math.round(2.3)
+    Math.round((2095 + 799)*0.1)/100
     ```
+    
