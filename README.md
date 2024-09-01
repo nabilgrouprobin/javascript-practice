@@ -142,7 +142,7 @@ alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
     //'some\ntext'
     ```
  - exercise
-```
+```js
 //3a
 'My name is:'
 //3b
