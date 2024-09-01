@@ -149,6 +149,19 @@ alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
 'Robin'
 //3c
 'My name is:' + 'Robin'
-
-
+//3d
+'Total cost: $' + (5+3)
+//3e
+`Total cost: $${5 + 3}`
+//3f
+alert(`Total cost: $${5 + 3}`)
+//3g
+'Total cost: $' + (599+295)/100
+//3h
+`Total cost: $${(599+295)/100}`
+//3i
+alert(`Total cost: $${(599+295)/100}`)
+//3j
+`Total cost:$${(599+295)/100}
+Thank you, come again!`
 ```
