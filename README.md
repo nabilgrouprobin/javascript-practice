@@ -100,6 +100,25 @@ Math.ceil(2.2)
 - syntax = '...'
 - we can add string like
 ```js
-'some' + 'text'
+'some' + 'text' //sometext
+'some' + 'more' + 'text' //somemoretext
+// this is called concatenation = combine strings together
 ```
-    
+- we can see the type of any value
+```
+typeof 3
+typeof 'hello'
+```
+- we can add number and string
+
+```
+'hello' + 3 //hello3
+//this is called type coercion or automatic type conversion
+```
+- practice
+```
+'$' + 20.95 +7.99 //shows error
+'$20.95' + 7.99 //shows error
+'$' + ((2095+799)/100) //right
+'$Items (' + (1 + 1) + '): $'+ (2095+799)/100
+```    
