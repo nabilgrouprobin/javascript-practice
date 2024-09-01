@@ -129,7 +129,7 @@ alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
      - escape character = \'
      - escape character = \"
      - escape character = \n //new line character
-  - backtick = template string = // `....`
+  - backtick = template string = // \`....\`
     - interpolation = insert value directly into string
     ```js
     `Items(${1+1}): $${(2095+799)/100}`
