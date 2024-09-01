@@ -105,20 +105,21 @@ Math.ceil(2.2)
 // this is called concatenation = combine strings together
 ```
 - we can see the type of any value
-```
+```js
 typeof 3
 typeof 'hello'
 ```
 - we can add number and string
 
-```
+```js
 'hello' + 3 //hello3
 //this is called type coercion or automatic type conversion
 ```
 - practice
-```
+```js
 '$' + 20.95 +7.99 //shows error
 '$20.95' + 7.99 //shows error
 '$' + ((2095+799)/100) //right
 '$Items (' + (1 + 1) + '): $'+ (2095+799)/100
+alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
 ```    
