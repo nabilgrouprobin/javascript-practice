@@ -54,4 +54,8 @@ alert('Abdur Rouf Robin');
     Math.round(2.3)
     Math.round((2095 + 799)*0.1)/100
     ```
+## How to use Google
+- mdn web docs javaScript
+- chatgpt
+- devdocs
     
