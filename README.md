@@ -46,3 +46,6 @@ alert('Abdur Rouf Robin');
       - (..)
       - *, /
       - +, -
+  - 0.1 + 0.2 = 0.3000000000000004 // computer can't floating number properly
+  - to avoid this problem ---->> transform into integer (for dollar transform into cents) (to taka          transform into poisa)
+  - 
