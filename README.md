@@ -186,4 +186,5 @@ Thank you, come again!`
 - Attribute changes the behavior of an element
 - onclick = whenever we click the element
 - first script tag then onclick js
+- // used in js for comments
 
