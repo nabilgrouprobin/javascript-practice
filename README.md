@@ -180,4 +180,7 @@ Thank you, come again!`
 - HTML = Hyper Text MarkUp Language
 - nesting = element inside an element
 - multiple spaces are combined into 1 space
+- newline also count as converted space
+- webpage is a single page of website
+- CSS = Cascading Style Sheets
 
