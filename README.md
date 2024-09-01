@@ -41,4 +41,8 @@ alert('Abdur Rouf Robin');
 ## Numbers
 
 - order of operations
-  - 
+  - BODMAS
+  - we can't calculate % . we have to calculate manually 1% = 1/10
+      - (..)
+      - *, /
+      - +, -
