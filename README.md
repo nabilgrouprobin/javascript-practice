@@ -126,9 +126,9 @@ alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
 - 3 ways to create string
   - single quote = '....' // better
   - double quotes = "...." // when we want to use single quote in string like I'm
-     - escape character = \'
-     - escape character = \"
-     - escape character = \n //new line character
+     - escape character = \\'
+     - escape character = \\"
+     - escape character = \\n //new line character
   - backtick = template string = // \`....\`
     - interpolation = insert value directly into string
     ```js
