@@ -175,3 +175,9 @@ Thank you, come again!`
 //3o
 `Order total:   $${(2*2095 + 2*799)/100 + (499+499)/100+Math.round(((2*2095 + 2*799) + (499+499))*0.1)/100}`
 ```
+## Html Css Javascript together
+- install a code editor ( VS Code )
+- HTML = Hyper Text MarkUp Language
+- nesting = element inside an element
+- multiple spaces are combined into 1 space
+
