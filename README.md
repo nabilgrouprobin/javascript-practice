@@ -46,16 +46,17 @@ alert('Abdur Rouf Robin');
       - (..)
       - *, /
       - +, -
-  - 0.1 + 0.2 = 0.3000000000000004 // computer can't floating number properly
-  - to avoid this problem ---->> transform into integer (for dollar transform into cents) (to taka          transform into poisa)
-  - to round
+- 0.1 + 0.2 = 0.3000000000000004 // computer can't floating number properly
+- to avoid this problem ---->> transform into integer (for dollar transform into cents) (to taka          transform into poisa)
+- to round
     ```js
     Math.round(2.2)
     Math.round(2.3)
     Math.round((2095 + 799)*0.1)/100
     ```
-## How to use Google
+### How to use Google
 - mdn web docs javaScript
 - chatgpt
 - devdocs
+-  homework
     
