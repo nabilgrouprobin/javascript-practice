@@ -95,4 +95,11 @@ Math.ceil(2.2)
 //2n
 ((-5)*9/5)+32
 ```
+## String
+- string = text
+- syntax = '...'
+- we can add string like
+```js
+'some' + 'text'
+```
     
