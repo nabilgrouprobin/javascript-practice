@@ -385,3 +385,10 @@ variable1 = variable1 + 1
    </body>
    </html>
 ```
+- all these line do the same thing
+
+```
+cartQuantity = cartQuantity + 1
+cartQuantity +=1
+cantQuantity++
+```
