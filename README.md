@@ -983,6 +983,7 @@ const c; // best
   2. \* /
   3. \+ -
   4. comparison operator
+  5. logical operators
 ```js
 console.log(3>5-5);
 ```       
@@ -1010,4 +1011,111 @@ console.log('You are overaged to drive');
 else{
 console.log(`You can't drive`);
 }
+```
+- Math.random() generates a random number between 0 and 1 it generates '0<=number<1'
+- logical operators = let us combine boolean values
+```js
+&&
+||
+!
+```
+- scope = scope means where a variable exists
+- scope helps us to avoid naming conflicts
+- when we reassign a variable we heave to set variable type to 'let'
+- any variable we create inside the curly brackets will only exist inside the curly brackets
+- 'var' doesn't really follow the rules of scope thats why we can't use 'var' in coding
+- we can't redeclare block-scope variable but can reassign it even if ...................
+- rock paper scissors
+```js
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+
+      let result = '';
+
+      if (computerMove === 'rock') {
+        result = 'Tie.';
+      } else if (computerMove === 'paper') {
+        result = 'You lose.';
+      } else if (computerMove === 'scissors') {
+        result = 'You win.';
+      }
+
+      alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
+    ">Rock</button>
+
+    <button onclick="
+       randomNumber = Math.random();
+
+       computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+
+      result = '';
+
+      if (computerMove === 'rock') {
+        result = 'You win.';
+      } else if (computerMove === 'paper') {
+        result = 'Tie.';
+      } else if (computerMove === 'scissors') {
+        result = 'You lose.';
+      }
+
+      alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
+    ">Paper</button>
+
+    <button onclick="
+      randomNumber = Math.random();
+
+      computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+
+      result = '';
+
+      if (computerMove === 'rock') {
+        result = 'You lose.';
+      } else if (computerMove === 'paper') {
+        result = 'You win.';
+      } else if (computerMove === 'scissors') {
+        result = 'Tie.';
+      }
+
+      alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+    ">Scissors</button>
+
+    <script>
+      
+    </script>
+  </body>
+</html>
+
 ```
