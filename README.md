@@ -64,7 +64,7 @@ document.body.innerHTML = '';
 - mdn web docs javaScript
 - chatgpt
 - devdocs
--  homework
+-  homework of chapter 2
 ```js
 //2a
 1*10+3*8+1*5
@@ -141,7 +141,7 @@ alert('$Items (' + (1 + 1) + '): $'+ (2095+799)/100);
     text`
     //'some\ntext'
     ```
- - exercise
+ - exercise of chapter 3
 ```js
 //3a
 'My name is:'
@@ -190,3 +190,149 @@ Thank you, come again!`
 - /*  */ used in js for multiline comments
 - \<!-- --> used in HTML for comments
 - /**/ used in css
+- exercise of chapter 4
+```js
+//4a
+<button>Click</button>
+//4b
+<button>Simon</button>
+<button>chocolate</button>
+//4c
+<p>Hello, world!</p>
+//4d
+<p>Hello, world!</p>
+<p>Today I went to the grocery store to buy some eggs and vegetables.</p>
+//4e
+<style>
+  .add-to-cart-button {
+    background-color: yellow;
+  }
+
+  .buy-now-button {
+    background-color: orange;
+  }
+</style>
+
+<button class="add-to-cart-button">Add to cart</button>
+<button class="buy-now-button">Buy now</button>
+//4f
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .add-to-cart-button {
+        background-color: yellow;
+      }
+    
+      .buy-now-button {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add-to-cart-button">Add to cart</button>
+    <button class="buy-now-button">Buy now</button>
+  </body>
+</html>
+//4g
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buttons</title>
+    <style>
+      .add-to-cart-button {
+        background-color: yellow;
+      }
+    
+      .buy-now-button {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add-to-cart-button">Add to cart</button>
+    <button class="buy-now-button">Buy now</button>
+  </body>
+</html>
+//4h
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buttons</title>
+    <style>
+      .add-to-cart-button {
+        background-color: yellow;
+      }
+    
+      .buy-now-button {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add-to-cart-button">Add to cart</button>
+    <button class="buy-now-button">Buy now</button>
+
+    <script>
+      console.log('Welcome!');
+    </script>
+  </body>
+</html>
+//4i
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .add-to-cart-button {
+        background-color: yellow;
+      }
+    
+      .buy-now-button {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Adults Plain Cotton T-shirt</p>
+    <p>Price: $7.99</p>
+    <button class="add-to-cart-button">Add to cart</button>
+    <button class="buy-now-button">Buy now</button>
+  </body>
+</html>
+//4j
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .add-to-cart-button {
+        background-color: yellow;
+      }
+    
+      .buy-now-button {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Adults Plain Cotton T-shirt</p>
+    <p>Price: $7.99</p>
+
+    <!-- I added some extra spaces to make the code
+    easier to read. -->
+    <button class="add-to-cart-button" onclick="
+      alert('Added');
+    ">Add to cart</button>
+
+    <button class="buy-now-button" onclick="
+      console.log('Loading...');
+      alert('Purchased');
+    ">Buy now</button>
+  </body>
+</html>
+
+
+
+
+
+
+```
