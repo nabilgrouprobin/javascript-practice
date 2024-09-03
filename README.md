@@ -349,12 +349,12 @@ variable1 = variable1 + 1
    - cart project
   ```html
   <!DOCTYPE html>
-<html>
-  <head>
-    <title>Cart Quantity</title>
-  </head>
+\<html>
+  \<head>
+    \<title>Cart Quantity</title>
+  \</head>
   <body>
-    <button onclick="
+    \<button onclick="
       console.log(`Cart quantity: ${cartQuantity}`);
     ">Show Quantity</button>
 
