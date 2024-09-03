@@ -969,3 +969,21 @@ const c; // best
   </body>
 </html>
 ```
+- booleans and if statements
+- there are only two boolean values - true  - false
+- comaprision of numbers
+- we don't surround this with quote like 'true'  or 'false'- if we did then it will become string
+- true, false --> boolean
+- 'true', 'false' --> string
+- comparison operator --> >, <, >=, <=, ===, !==
+- ( == ) and ( != ) compare only value
+- ( === ) and ( !== ) compare both value and type
+- in the order of operations comparison operators have the lower priority than math
+  1. (...)
+  2. \* /
+  3. \+ -
+  4. comparison operator
+```js
+console.log(3>5-5);
+```       
+- 
