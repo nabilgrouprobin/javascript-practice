@@ -329,10 +329,23 @@ Thank you, come again!`
     ">Buy now</button>
   </body>
 </html>
-
-
-
-
-
-
 ```
+## chapter 5 variables
+- variable = a container
+```
+let variable1 = 3
+let calculation = 2 + 2
+let result = calculation + 2
+let message = 'hello!'
+variable1 = variable1 + 1
+```
+- variable name restriction
+   - can't use special word
+   - can't use special characters except $ and _
+   - can't start with a number
+   - ; means end of an instruction
+   - semicolon insertion = insert semicolon in last automatically
+   - assiging a value to a variable and reassigning a value to the variable
+   - cart project
+  ```
+  ```
