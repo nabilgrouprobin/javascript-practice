@@ -1119,3 +1119,66 @@ console.log(`You can't drive`);
 </html>
 
 ```
+- strategy for javaScript
+   - figure out what steps we need
+   - convert these steps into code
+## More details about boolean and if statements
+- Truthy and Falsy Values
+- Truthy Values = the value just behave like 'true'
+- Falsy Values = the value just behave like 'false'
+
+- Falsy Values
+  1. false
+  2. 0
+  3. NaN
+  4. undefined
+  5. null
+  6. '' //empty value
+```js
+console.log(!0) //true
+```
+- NaN = Not a Number
+```js
+console.log('text'/5) //NaN
+```
+- undefined = doesn't have a value
+```js
+let variable1;
+console.log(variable1);
+```
+- for 'const' we must assign a value or undefined
+```js
+const variable1 = undefined;
+```
+- null //later
+```js
+//later
+```
+- shortcuts for if-statements
+   - Ternary operators '?:'
+   - Guard oprators '&&'
+   - Default operators '||'
+- we can set variable for ternary operators
+```
+const result = 0 ? 'truthy' : 'falsy';
+console.log(result);
+```
+- short circuit evaluation for && operators and || operators
+```
+false && value2 // && operator stops early and doesn't even need to runn the code right side value2
+```
+or
+```js
+false && console.log('hello')
+true && console.log('hello')
+const message = 5>3 && 'hello'
+const message = 0 && 'hello'
+```
+- Default operators
+```
+const currency = 'EUR' || 'USD';
+const currency = undefined || 'USD';
+console.log(currency)
+```
+
+
