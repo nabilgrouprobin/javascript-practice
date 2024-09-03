@@ -347,7 +347,7 @@ variable1 = variable1 + 1
    - semicolon insertion = insert semicolon in last automatically
    - assiging a value to a variable and reassigning a value to the variable
    - cart project
-  ```html
+ ```html
   <!DOCTYPE html>
 \<html>
   \<head>
@@ -382,7 +382,6 @@ variable1 = variable1 + 1
     <script>
       let cartQuantity = 0;
     </script>
-  </body>
-</html>
-
-  ```
+   </body>
+   </html>
+```
