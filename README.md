@@ -387,8 +387,34 @@ variable1 = variable1 + 1
 ```
 - all these line do the same thing
 
-```
+```js
 cartQuantity = cartQuantity + 1
 cartQuantity +=1
 cantQuantity++
 ```
+- other shortcuts
+```
++=
+-=
+*=
+/=
+++
+--
+```
+- naming variable
+```
+camelCase = cartQuantity // special naming convention for js
+PascalCase = CartQuantity
+kabab-case = cart-quantity
+snake_case = cart_quantity
+```
+- naming should not too short too long
+- naming should be meningful and smart and mediumsize
+- 3 ways to create variable in js
+```
+let a; // better
+var b; // good
+const c; // best
+```
+- we can use 'typeof' with variable
+- 
