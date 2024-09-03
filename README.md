@@ -332,7 +332,7 @@ Thank you, come again!`
 ```
 ## chapter 5 variables
 - variable = a container
-```
+```js
 let variable1 = 3
 let calculation = 2 + 2
 let result = calculation + 2
@@ -986,4 +986,28 @@ const c; // best
 ```js
 console.log(3>5-5);
 ```       
-- 
+- if statement
+```js
+if(boolean value or any command that results a boolean value){
+command---->>
+}
+else{
+command ----->
+}
+```
+- if command line is one line then no need to use curly brackets
+- we can add more branches between 'if' and 'else' named 'else if'
+```js
+if(age>=){
+console.log('You can drive');
+}
+else if (age>=){
+console.log('Almost there..!');
+}
+else if (age>=70){
+console.log('You are overaged to drive');
+}
+else{
+console.log(`You can't drive`);
+}
+```
