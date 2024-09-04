@@ -1159,7 +1159,7 @@ const variable1 = undefined;
    - Guard oprators '&&'
    - Default operators '||'
 - we can set variable for ternary operators
-```
+```js
 const result = 0 ? 'truthy' : 'falsy';
 console.log(result);
 ```
@@ -1175,7 +1175,7 @@ const message = 5>3 && 'hello'
 const message = 0 && 'hello'
 ```
 - Default operators
-```
+```js
 const currency = 'EUR' || 'USD';
 const currency = undefined || 'USD';
 console.log(currency)
