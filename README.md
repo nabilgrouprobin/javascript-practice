@@ -1584,7 +1584,10 @@ console.log(currency)
 - parameter name = camelCase
 - argument = when we passing a value while calling the function. it is an actual value
 - parameter = it acts as a placeholder for the data
-- 
+- if we don't give any argument to parameter it will be undefined automatically
+- and any caluculation with undefined number results NaN = Not a Number
+- to fix this we set a default value in parameter initializing 
+- inside a function we can call another function
 
 ```html
 <!DOCTYPE html>
