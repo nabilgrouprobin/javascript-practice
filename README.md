@@ -1561,6 +1561,39 @@ console.log(currency)
 ```
 ## chapter 7 functions
 
+- function lets us reuse code
+
+- function basics
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+      function function1() {
+        console.log('hello');
+        console.log(2 + 2);
+      }
+
+      function1();
+      function1();
+      */
+
+      function calculateTax(cost, taxPercent = 0.1) {
+        console.log(cost * taxPercent);
+      }
+
+      calculateTax(2000, 0.2);
+      calculateTax(5000);
+    </script>
+  </body>
+</html>
+
+```
 - rock paper scissors game
 ```html
 <!DOCTYPE html>
