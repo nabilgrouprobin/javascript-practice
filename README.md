@@ -1562,8 +1562,20 @@ console.log(currency)
 ## chapter 7 functions
 
 - function lets us reuse code
+- make our code easier to update
+- following the code line by line = tracing the code
 
 - function basics
+- best practice to use camel case
+- in function name we use verb or action to start like pickComputerMove(){}
+- any variable created between curly bracket only exist between curly brackets like const computerMove
+- solution 1. use global variable
+           2. use return statement
+- return statemnet = let us get a value out of a function also the value of the function when it is     called but we need to save the return value into another variable then console.log it
+- we can return 1. a value 2. a variable 3. a calculation 4. a function also
+- return; = returns the value 'undefined'
+- when we use return it ends the function immediately
+- we need to  call the function in where we want to use funtion
 
 ```html
 <!DOCTYPE html>
