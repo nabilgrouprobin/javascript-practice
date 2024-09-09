@@ -1578,6 +1578,13 @@ console.log(currency)
 - return; = returns the value 'undefined'
 - when we use return it ends the function immediately
 - we need to  call the function in where we want to use funtion
+- return = gets a value out of a function
+- parameter = puts a value into a function
+- parameter works same as a variable
+- parameter name = camelCase
+- argument = when we passing a value while calling the function. it is an actual value
+- parameter = it acts as a placeholder for the data
+- 
 
 ```html
 <!DOCTYPE html>
