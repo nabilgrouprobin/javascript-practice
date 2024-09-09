@@ -1571,6 +1571,8 @@ console.log(currency)
 - any variable created between curly bracket only exist between curly brackets like const computerMove
 - solution 1. use global variable
            2. use return statement
+- we prefer using return statement rather than using global variable because ' scope help us to prevent naming conflicts'
+- keep thing inside a scope if we can --> best practice
 - return statemnet = let us get a value out of a function also the value of the function when it is     called but we need to save the return value into another variable then console.log it
 - we can return 1. a value 2. a variable 3. a calculation 4. a function also
 - return; = returns the value 'undefined'
