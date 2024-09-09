@@ -2187,6 +2187,31 @@ console.log(currency)
 ## Chapter 8 Object
 
 - Objects = Object groups multiple values together
+- Here in product object 'name' and 'price' are callded 'properties'
+- Here in product object 'socks' and '1090' are called 'values'
+- name: 'socks'  this is called property value pair
+- product.name -->> this is called dot notation
+- product.notExists  --->> result in 'undefined'
+- product.newProperty = true   -->> to add new value to the object
+- to delete a value -->> delete product.name
+- object make our code more organized
+- we can reduct creating variables by object
+- bracket notation lets us use properties that don't work with dot notation
+- if the proporty name is like 'delivery-time' then we have to use bracket notation
+- we can use bracket notation to show variable or calculation
+-  'product2[vairable1]' or product2['delivery' + 'time']
+-  we use dot notation bt default bt in case we use bracket notaiton
+-  inside an object we can save any type of value like numbers, string, boolean, another objects(nested objects), functions,
+-  method = function inside object
+-  built in object = console, math, JSON, localStorage
+-  JSON = javaScript Object Notation
+-  JSON = similar to javaScript Object bt has less features
+-  JSON = all property and values (without numbers) must use double quotation
+-  JSON doesn't support single quotation, function,
+-  JSON syntax is more universal than javaScript Object
+-  we use JSON to send and receive data between two devices or applications and we use JSON to store data
+- JSON object help us to convert from JavaScript Objet to JSON
+- localStorage is use to save values more permanently
 ```html
 <!DOCTYPE html>
 <html>
@@ -2201,6 +2226,7 @@ console.log(currency)
         price: 1090
       };
       console.log(product);
+      console.log(typeof product);
       console.log(product.name);
       console.log(product.price);
 
@@ -2217,6 +2243,7 @@ console.log(currency)
       /*
       const product2 = {
         name: 'shirt',
+        // ['delivery-time']: '1 day' -->> if only have a string inside the brackets then we can skip brackets
         'delivery-time': '1 day',
         rating: {
           stars: 4.5,
@@ -2227,18 +2254,24 @@ console.log(currency)
         }
       };
       console.log(product2);
-      console.log(product2.name);
-      console.log(product2['name']);
+      console.log(product2.name);// dot notation
+      console.log(product2['name']); // bracket notation
       console.log(product2['delivery-time']);
       
+      console.log(product2.rating);
       console.log(product2.rating.count);
-      product2.fun();
 
-      console.log(typeof console.log);
+      product2.fun(); // this will run the function
 
+      console.log(typeof console); // object
+      console.log(typeof console.log); // function
+
+      JSON.stringify(product2)
       console.log(JSON.stringify(product2));
+      console.log(typeof JSON.stringify(product2)); // string
 
       const jsonString = JSON.stringify(product2);
+      JSON.parse(jsonString) // to convert from JSON to JavaScript Object 
       console.log(JSON.parse(jsonString));
       */
 
@@ -2314,6 +2347,14 @@ console.log(currency)
     ">Reset Score</button>
 
     <script>
+
+
+      /* const score = {
+            wins: 0,
+            loses: 0,
+            ties: 0
+          }; */
+
       let score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         losses: 0,
