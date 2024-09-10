@@ -1,4 +1,11 @@
 - DOM = Document Object Model
+- another built in object is - 'document' object
+- document object and webpage are linked together
+- document object represents or models the webpage
+- document object has properties and methods
+- DOM combines HTML an javaScript together and it gives javaScript control the webpage
+- if a HTML element is inside javaScript then the HTML element is converted into JS Object
+- 
 - DOM
 ```html
 <!DOCTYPE html>
@@ -11,6 +18,10 @@
     <button class="js-button">Second button</button>
 
     <script>
+      // documnet.body.innerHTML = 'hello'; // this code removes everything on the page with 'hello'
+      // here document --> object then body --> property of document and also an object
+      innerHTML = property of body
+      // document.title = 'Good job!'; // change the title of the page
       console.log(document.querySelector('button').innerHTML);
       document.querySelector('button')
         .innerHTML = 'Changed';
@@ -19,14 +30,16 @@
       console.log(buttonElement);
       
       /*
-      console.log(document.title);
-      document.title = 'Changed';
+      console.log(document.title); // to console the title of webpage
+      document.title = 'Changed'; // to change the title of webpage
 
-      console.log(document.body);
-      console.log(typeof document.body);
+      console.log(document.body); // to console all the code including body element
+      console.log(typeof document.body); // object // HTML elemet inside JS = object
 
-      console.log(document.body.innerHTML);
-      document.body.innerHTML = '<button>Good job!</button>';
+      console.log(document.body.innerHTML); // it gives all the html inside the body element without         body element
+      document.body.innerHTML = 'changed'; // change innet html with text
+      // change inner html with new html code
+      document.body.innerHTML = '<button>Good job!</button>'; // change the inner HTML of body element
       */
       
       /*
