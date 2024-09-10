@@ -1,1 +1,2 @@
-
+- DOM = Document Object Model
+- 
