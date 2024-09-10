@@ -2212,6 +2212,97 @@ console.log(currency)
 -  we use JSON to send and receive data between two devices or applications and we use JSON to store data
 - JSON object help us to convert from JavaScript Objet to JSON
 - localStorage is use to save values more permanently
+- they only exist only current page
+- if we reload the page or exit the page variables are reset back to initial value
+- variables are temporary
+- local storage doesn't get deleted when we refresh the page
+```js
+localStorage.setItem('message', 'hello' ) /* method to save a value inside local storage where message = name and hello = value 
+localStorage only support strings */
+// so we need to convert our object into string by
+JSON.stringify(score) // here score is an object name and this convert score object into JSON-string
+```
+- to get that value out of local Storage
+
+```js
+localStorage.getItem('message');
+console.log(localStorage.getItem('message'))
+// we get the result in JSON-string so we need to convert into object
+JSON.parse(localStorage.getItem('score'));
+const score = JSON.parse(localStorage.getItem('score'));
+//if score is change later then we have to change const into let
+let score = JSON.parse(localStorage.getItem('score'));
+```
+- we need to remove the value from local Storage when we reset
+```js
+localStorage.removeItem('score')
+```
+- when something doesn't exist in localStorage it is going to provide a value 'null'
+- it we try to use any property of null it will give an error
+- to solve the problem we can set value with if statement when it will be 'null'
+```js
+if(score === null){
+  score = {
+  wins: 0,
+  loses= 0,
+  ties= 0
+  };
+  // but in this case set the variable to let not const // 'let score'  not 'const score'
+}
+```
+- we can use short cuts
+
+```js
+if(score === null){
+  score = {
+  wins: 0,
+  loses= 0,
+  ties= 0
+  };
+  // but in this case set the variable to let not const // 'let score'  not 'const score'
+}
+```
+- to
+```js
+if(!score){
+  score = {
+  wins: 0,
+  loses= 0,
+  ties= 0
+  };
+  // but in this case set the variable to let not const // 'let score'  not 'const score'
+}
+```
+- score = null
+```js
+!score => true
+score === null   => true
+```
+- or if score = {wins:0, loses:0, ties:0}
+```js
+!score => false
+score === null   => false
+```
+
+- we can use default operator
+```js
+let score = JSON.parse(localStorage.getItem('score'));
+if(!score){
+  score = {
+  wins: 0,
+  loses= 0,
+  ties= 0
+  };
+}
+```
+- to
+```js
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  loses= 0,
+  ties= 0
+  };
+```
 ```html
 <!DOCTYPE html>
 <html>
