@@ -2786,7 +2786,7 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
   </body>
 </html>
 ```
--8g
+- 8g
 ```html
 <!DOCTYPE html>
 <html>
