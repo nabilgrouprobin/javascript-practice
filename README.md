@@ -2303,6 +2303,116 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   ties= 0
   };
 ```
+- 'null' is one of the falsy value in js it similar to value undefined
+- null vs undefined
+- null = intentionally want something to be empty
+```js
+function func(parameter = 'defalult'){
+console.log(parameter);
+func();  // default
+func(undefined);  // default
+func(null);     // null
+}
+```
+- Auto-Boxing
+- objects have propeties and methods
+```js
+{
+  name: 'shirt', // property
+  prict: 799, // property
+  fun: function dis(){  // method
+  console.log('method');
+  }
+}
+```
+- other values also have properties and methods
+```js
+console.log('hello'.length); // 5  // we use property in string
+console.log('hello'.toUpperCase());  // we use method in string
+```
+- javaScript has a special feature Auto Boxing = javaScript automatically wrap the string into          special-object like a box.
+- Autoboxing also works with other type of values like 'number' and 'boolean'
+```js
+3.0.toString();
+true.toString();
+```
+- Autoboxing doesn't work with 'null' and 'undefined'
+```js
+null.property // gives error
+undefined.method() // gives error
+```
+- objects are references
+- actual values ate stored in somewhere in memory but object1 only has the pointer to the location
+- copy by reference = object2 will copy object1's referece
+```js
+const object1 = {
+  message: 'hello'
+  // const object1 = references
+};
+  const object2 = object1; // in here we copy the object1's reference into object2 we don't copy the    object actually
+  object1.message = 'Good job';
+  console.log(object1);
+  console.log(object2);
+  // const prevents us to change the reference in the variable but doesn't prevent us to reach  the     references and change the value of the object's property  
+```
+- eventhough we use const in object we change the property value and the object
+- we can't compare objects directly
+```js
+const object3 = {
+   message: 'Good job'
+};
+console.log(object3 === object1); // false -- different reference
+console.log(object2 === object1); // true -- same referemce
+console.log(object3.message === object1. message) //
+```
+- shortcuts for object
+```js
+const object4 = {
+  message: 'Good job!',
+  price: 799
+};
+const message = object4.message; // variable name and property name are same
+const {message, price} = object4; // destructing = easier way to take properties out of an object
+console.log(message);
+console.log(price)
+```
+- shorthand property
+```js
+const object4 = {
+  message: 'Good job!',
+  price: 799
+};
+/* const object5 = {
+  message: message
+};
+*/
+or
+const object5 = {
+  message
+};
+console.log(object5)
+```
+- shorthand method
+```js
+const object5 = {
+  method: function function1() {
+    console.log('nothing');
+  }
+};
+console.log(object5);
+object5.method();
+```
+- or
+```js
+  const object5 = {
+    method() {
+      console.log('nothing');
+  } 
+};
+console.log(object5);
+object5.method();
+```
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -2529,7 +2639,385 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 </html>
 
 ```
+- 8a
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const product = {
+        name: 'basketball',
+        price: 2095
+      };
+      console.log(product);
+    </script>
+  </body>
+</html>
+```
+- 8b
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const product = {
+        name: 'basketball',
+        price: 2095
+      };
+      console.log(product);
 
+      product.price += 500;
+      console.log(product);
+    </script>
+  </body>
+</html>
+```
+- 8c
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const product = {
+        name: 'basketball',
+        price: 2095
+      };
+      console.log(product);
+
+      product.price += 500;
+      console.log(product);
+
+      product['delivery-time'] = '3 days';
+      console.log(product);
+    </script>
+  </body>
+</html>
+```
+- 8d
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1;
+        } else {
+          return product2;
+        }
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1090
+      };
+
+      console.log(comparePrice(product1, product2));
+    </script>
+  </body>
+</html>
+```
+- 8e
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function isSameProduct(product1, product2) {
+        if (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      // Here is an alternative solution that uses less code.
+      function isSameProduct(product1, product2) {
+        return (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        );
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1090
+      };
+
+      const product3 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      console.log(isSameProduct(product1, product2));
+      console.log(isSameProduct(product1, product3));
+    </script>
+  </body>
+</html>
+```
+- 8f
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      console.log('Good Morning'.toLowerCase());
+      console.log('TESTING'.toLowerCase());
+    </script>
+  </body>
+</html>
+```
+-8g
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      console.log('hello'.repeat(2));
+      console.log('test'.repeat(3));
+    </script>
+  </body>
+</html>
+```
+- 8h
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!-- Code changes are at the bottom. -->
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      ">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+
+      function updateCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+        localStorage.setItem('calculation', calculation);
+      }
+
+      // Optional: you can also create a function in order
+      // to reuse this code.
+      function saveCalculation() {
+        localStorage.setItem('calculation', calculation);
+      }
+    </script>
+  </body>
+</html>
+
+```
+- 8i
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      function playGame(guess) {
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!');
+      }
+    </script>
+  </body>
+</html>
+```
+- 8j
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      let score = {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(guess) {
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!');
+
+        if (guess === result) {
+          score.wins++;
+        } else {
+          score.losses++;
+        }
+        console.log(score);
+      }
+    </script>
+  </body>
+</html>
+```
+- 8k
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <script>
+      // We can use const here since score is a reference
+      // so we can modify it even if it uses const.
+      const score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(guess) {
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!');
+
+        if (guess === result) {
+          score.wins++;
+        } else {
+          score.losses++;
+        }
+        console.log(score);
+
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html>
+```
 
 
 
