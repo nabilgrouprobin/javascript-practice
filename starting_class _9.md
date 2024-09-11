@@ -5,7 +5,19 @@
 - document object has properties and methods
 - DOM combines HTML an javaScript together and it gives javaScript control the webpage
 - if a HTML element is inside javaScript then the HTML element is converted into JS Object
-- 
+- with DOM javaScript has full control of the webpage
+- method = a function saved inside an object
+- document.body = let us get the body element of html
+- document.querySelector() = let us get any element from the page and put in inside javaScript as        javaScript Object
+- document.querySelector('body') = document.body // same
+- Every HTML element has a proprty called 'innerHTML'. that let us control the HTML inside the element
+- document.querySelector() only gets the first element of html
+- any class usning for CSS can also be used for javaScript
+- HTML element inside javaScript is an object. object are values we can set object inside a varible
+- we generally set the element variable ending with (--Element or --Elem)
+- DOM combines JS and HTML together. it gives JS full control of the webpage
+- innerHTML property counts extra spaces around text to solve this we need to use innerText
+- innerText don't count extra spaces
 - DOM
 ```html
 <!DOCTYPE html>
@@ -22,10 +34,17 @@
       // here document --> object then body --> property of document and also an object
       innerHTML = property of body
       // document.title = 'Good job!'; // change the title of the page
+      document.querySelector('anyElementName, .anyClassName, #anyIdName') /* get the first element           class or id */
+      
+      document.querySelector('button')    
+      console.log(document.querySelector('button'))
       console.log(document.querySelector('button').innerHTML);
       document.querySelector('button')
         .innerHTML = 'Changed';
 
+      
+      document.querySelector('.js-button');
+      console.log(document.querySelector('.js-button'));
       const buttonElement = document.querySelector('.js-button');
       console.log(buttonElement);
       
