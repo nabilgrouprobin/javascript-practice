@@ -18,6 +18,22 @@
 - DOM combines JS and HTML together. it gives JS full control of the webpage
 - innerHTML property counts extra spaces around text to solve this we need to use innerText
 - innerText don't count extra spaces
+- clicks, keydown => events
+- onclick, onkeydown => event listeners = they check for events and run js
+- eventlisteners
+    - onclick          = click
+    - onkeydown        = key press
+    - onscroll         = scrolling
+    - onmouseenter     = hovering mouse
+     - onmouseleave    = stop hovering mouse
+ - if a string only contains a number and we ( - , * , / ) then the string will be converted into         number automatically = type coercion --> not recommneded
+ - window object is a built in object
+ - document object represents the webpage
+ - window object represents the browser
+ - document object is inside the window object
+ - console object is inside the window object
+ - alert function is inside the window object
+ - javaScript will automatically add window object in front of those object or function
 - DOM
 ```html
 <!DOCTYPE html>
@@ -85,6 +101,8 @@
     </button>
 
     <p>Amazon Shipping Calculator</p>
+    // <input>    this is called a void element
+    // placeholder is an attribute
     <input placeholder="Cost of order" class="js-cost-input" onkeydown="
       handleCostKeydown(event);
     ">
@@ -94,15 +112,19 @@
     <p class="js-total-cost"></p>
 
     <script>
-      String(25)
-      console.log('25' - 5);
-      console.log('25' + 5);
+      String(25) // it will convert the number into string
+      console.log('25' - 5); //20
+      console.log('25' + 5); // 255
 
+      
       window.document
       window.console.log('window');
       window.alert
 
       function handleCostKeydown(event) {
+        // console.log('typring')
+        // console.log(event) //object
+        // console.log(event.key)
         if (event.key === 'Enter') {
           calculateTotal();
         }
@@ -110,7 +132,9 @@
 
       function calculateTotal() {
         const inputElement = document.querySelector('.js-cost-input');
+        inputElement.value // this is how we get the value from an input element but as string
         let cost = Number(inputElement.value);
+        // Number() is a built in funciton
 
         if (cost < 40) {
           cost = cost + 10;
