@@ -11,7 +11,9 @@
 - loop body, loop variable, loop condition, increment/decrement step
 - the loop is going for ever is called = infinite loop
 - iteration = how many times we run the loop body
-- 
+- loops create a scope
+- standard loop  -->> use for loop  ||   for non-standard loop  -->> while loop
+- accumulator pattern ==>> 1. create a variable to store the result  2. loop through the array and update the result
 - arrays and loops
 ```html
 <!DOCTYPE html>
@@ -56,6 +58,7 @@
         console.log(i);
         i++;
       }
+      console.log(i);
 
       for (let i = 1; i <= 5; i++) {
         console.log(i);
@@ -70,7 +73,7 @@
       console.log(randomNumber);
       */
 
-      /*
+      /* //  looping through an array
       const todoList = [
         'make dinner',
         'wash dishes',
@@ -83,9 +86,9 @@
       }
       */
 
-      /*
+      /* // accumulator patern
       const nums = [1, 1, 3];
-      let total = 0;
+      let total = 0; // accumulator variable
 
       for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
@@ -93,7 +96,7 @@
       }
       console.log(total);
 
-      const numsDoubled = [];
+      const numsDoubled = []; // accumulator variable can be an array
 
       for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
