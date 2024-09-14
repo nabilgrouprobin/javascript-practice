@@ -1,4 +1,17 @@
 ## chapter 10 DOM with CSS
+- to change CSS with js
+- '.classList' gives us control of the 'class' attribute
+- 'classList' is an object
+- to add a class 
+```js
+.classList.add('classNameThatWeWantToAdd');
+// don't need '.' before classname within single quote
+```
+- to remove a class
+```js
+.classList.remove('classNameThatWeWantToRemove');
+// don't need '.' before classname within single quote
+```
 - DOM projects
 ```html
 <!DOCTYPE html>
@@ -295,4 +308,287 @@ function pickComputerMove() {
   return computerMove;
 }
 ```
+- Exercise
+- 10a
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .amazon-button {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        padding: 5px 40px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="amazon-button">
+      Add to Cart
+    </button>
+  </body>
+</html>
+```
+- 10b
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .request-now-button {
+        background-color: black;
+        color: white;
+        border: none;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 20px;
+      }
 
+      .schedule-later-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="request-now-button">
+      Request now
+    </button>
+    <button class="schedule-later-button">
+      Schedule for later
+    </button>
+  </body>
+</html>
+```
+- 10c
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button class="js-button">Test</button>
+
+    <script>
+      // I used the variable name 'button' because
+      // it's shorter, but feel free to use whatever
+      // variable name you want.
+      const button = document.querySelector('.js-button');
+      console.log(button.classList.contains('js-button'));
+    </script>
+  </body>
+</html>
+```
+- 10d
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* The word "toggle" means turn on/off. */
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Gaming</button>
+  </body>
+</html>
+```
+- 10e
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* The word "toggle" means turn on/off. */
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      let button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Gaming</button>
+
+    <button class="toggle-button js-button-2" onclick="
+       button = document.querySelector('.js-button-2');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Music</button>
+
+    <button class="toggle-button js-button-3" onclick="
+       button = document.querySelector('.js-button-3');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Tech</button>
+  </body>
+</html>
+```
+- 10f html
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="10f.css">
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      toggleButton('.js-button');
+    ">Gaming</button>
+
+    <button class="toggle-button js-button-2" onclick="
+      toggleButton('.js-button-2');
+    ">Music</button>
+
+    <button class="toggle-button js-button-3" onclick="
+      toggleButton('.js-button-3');
+    ">Tech</button>
+
+    <script src="10f.js"></script>
+  </body>
+</html>
+```
+- 10f CSS
+```css
+.toggle-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+```
+- 10f js
+```js
+// The word "toggle" means turn on/off.
+function toggleButton(selector) {
+  const button = document.querySelector(selector);
+  if (!button.classList.contains('is-toggled')) {
+    button.classList.add('is-toggled');
+  } else {
+    button.classList.remove('is-toggled');
+  }
+}
+```
+- 10g
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="10g.css">
+  </head>
+  <body>
+    <button class="toggle-button js-button" onclick="
+      toggleButton('.js-button');
+    ">Gaming</button>
+
+    <button class="toggle-button js-button-2" onclick="
+      toggleButton('.js-button-2');
+    ">Music</button>
+
+    <button class="toggle-button js-button-3" onclick="
+      toggleButton('.js-button-3');
+    ">Tech</button>
+
+    <script src="10g.js"></script>
+  </body>
+</html>
+```
+- 10g CSS
+```css
+.toggle-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+```
+- 10g js
+```js
+// The word "toggle" means turn on/off.
+function toggleButton(selector) {
+  const button = document.querySelector(selector);
+  if (!button.classList.contains('is-toggled')) {
+
+    // Before turning this button ON, check if there's
+    // already a button that's turned ON and turn it OFF.
+    turnOffPreviousButton();
+
+    button.classList.add('is-toggled');
+  } else {
+    button.classList.remove('is-toggled');
+  }
+}
+
+function turnOffPreviousButton() {
+  const previousButton = document.querySelector('.is-toggled');
+  if (previousButton) {
+    previousButton.classList.remove('is-toggled');
+  }
+}
+```
