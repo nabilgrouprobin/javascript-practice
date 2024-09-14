@@ -1,5 +1,17 @@
 ## Arrays and Loops
-
+- array = is another type of value
+- array represents a list of values 
+- array stores values and array is also a value
+- we can also write an array in muliple line
+- index = position in the array
+- in array we can put any type of value like int float string boolean object array itself
+- arrays have properties and method
+- if an array doesn't have value then it id called empty array
+- loops let us run code over and over
+- loop body, loop variable, loop condition, increment/decrement step
+- the loop is going for ever is called = infinite loop
+- iteration = how many times we run the loop body
+- 
 - arrays and loops
 ```html
 <!DOCTYPE html>
@@ -16,6 +28,8 @@
         30
       ];
       console.log(myArray);
+      console.log(typeof myArray); //
+       
 
       console.log(myArray[1]);
       myArray[0] = 99;
@@ -23,15 +37,15 @@
 
       [1, 'hello', true, { name: 'socks' }, [1, 2]]
 
-      console.log(typeof [1, 2]);
-      console.log(Array.isArray([1, 2]));
+      console.log(typeof [1, 2]); // object (special type of object)
+      console.log(Array.isArray([1, 2])); //true
 
       console.log(myArray.length);
       
-      myArray.push(100);
+      myArray.push(100); // adds a value in the end of the array + it removes value from an array
       console.log(myArray);
 
-      myArray.splice(0, 1);
+      myArray.splice(0, 1); (index, number of value we want to remove)
       console.log(myArray);
       */
 
