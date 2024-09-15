@@ -22,6 +22,12 @@
 - by default align-items: stretch; but if mother class in center then it will automatically center
 - we can group two or more values together by object or object inside an array
 - stretch in align-items is align items vertically stretch
+- arrays are references
+- break = exit a loop early do does using = return
+- break in a loop = return in a function = return also break the loop
+- continue = skip 1 iteration
+- in for loop using continue incremnet will do automatically but while loop we have to do it manually
+- in the last of function body console.log(result) = return result; then console.log(funtionname())
 ```html
 <!DOCTYPE html>
 <html>
@@ -113,11 +119,15 @@
       */
 
       const array1 = [1, 2, 3];
+      // const array1 = array2
+      // avoid the reference problem
       const array2 = array1.slice();
       array2.push(4);
       console.log(array1);
       console.log(array2);
 
+      const array3 = [1, 2, 3]
+      // Destructuring
       const [firstValue, secondValue] = [1, 2, 3];
 
       for (let i = 1; i <= 10; i++) {
@@ -135,6 +145,7 @@
       while (i <= 10) {
         if (i % 3 === 0) {
           i++;
+          // in while loop we have to increment the variable before continue;
           continue;
         }
         console.log(i);
