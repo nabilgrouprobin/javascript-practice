@@ -1,6 +1,23 @@
 ## advamced function
 
 - advanced function
+- functions are values
+- anonymous function = function without a name
+- function saved with a variable can't provide the feature hoisting
+- but function with only function keyword can provide hoisting feature
+- we can save a funtion(a value) in an object = method
+- we can pass a value into a function
+- anything we do with a value we can do with a function
+- setTimeout() = allows us to run a function in the future
+- setTimeout() is a built in funtion
+- setTimeout(function(){console.log('timeout');}, 3000);
+- Synchronous Code = will wait for a line to finish before going to the next line
+- Asynchronous Code = won't wait for a line to finish before going to the next line
+- Advantages of Asynchronous Code = it doesn't block our code for given time
+- setInterval() is a built in function
+- setInterval(function(){console.log('interval');}, 3000); // it also asynchronous
+- setInterval() returns a number = we can use that numbr to stop the interval
+- clearInterval(intervalID) = to stop the setInterval()
 ```html
 <!DOCTYPE html>
 <html>
@@ -11,7 +28,25 @@
     <button onclick="" class="js-button">Click</button>
 
     <script>
+      /* function greeting(){
+      console.log('hello')
+      }
+      greeting();
+      const num = 2;
+      const function1 = function greeting(){
+      console.log('hello2')
+      };
+      function1(); // calling the function // hello2
+      console.log(function1); // f greeting(){console.log('hello2');}
+      console.log(typeof function1); // function
       /*
+      /*
+      // cleanup
+      
+      const function1 = function(){ //anonymous function
+      console.log('hello2');
+      }
+      */
       const buttonElement = document.querySelector('.js-button');
 
       const eventListener = () => {
@@ -44,29 +79,32 @@
 
       const object1 = {
         num: 2,
+        // fun: function greeting() { //we can remove the name because we can access the function by
+        // -- object1.fun()
         fun: function() {
-          console.log('hello3');
-        }
+          console.log('hello3'); 
+        } // function inside an object called method
       };
       object1.fun();
 
-      function display(param) {
+      function display(param) { // here is param = parameter = passing a value into a function
         console.log(param);
       }
-      display(2);
+      display(2); // here 2 is argument
 
       function run(param) {
         param();
       }
-      run(function() {
+      run(function() {  // passing a function into a function 
         console.log('hello4');
+      // the function that is passing into is called = callback funtion
       });
       */
-
+      // Asynchronous Programming
       /*
       setTimeout(function() {
-        console.log('timeout');
-        console.log('timeout2');
+        console.log('timeout'); // inside this function is also synchronous
+        console.log('timeout2'); // inside this function is also synchronous
       }, 3000);
 
       console.log('next line');
@@ -79,6 +117,7 @@
       */
 
       /*
+      // loop through an array
       [
         'make dinner',
         'wash dishes',
@@ -253,7 +292,7 @@ if (!score) {
 */
 
 let isAutoPlaying = false;
-let intervalId;
+let intervalId; // in order to save the last id
 
 //const autoPlay = () => {
 
