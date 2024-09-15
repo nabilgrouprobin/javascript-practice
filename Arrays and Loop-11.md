@@ -14,7 +14,11 @@
 - loops create a scope
 - standard loop  -->> use for loop  ||   for non-standard loop  -->> while loop
 - accumulator pattern ==>> 1. create a variable to store the result  2. loop through the array and update the result
+- inside HTML we can't set paragraph tag inside another paragraph tag
+- difference between div and p is div doesn't have built in padding margin but p has
+- div doesn't have default styling but paragraph has
 - arrays and loops
+- 1. save the data 2. generate the HTML 3.make it interactive
 ```html
 <!DOCTYPE html>
 <html>
@@ -227,6 +231,15 @@ body {
 ```
 - todo list js
 ```js
+/* const todoList = ['make dinner', wash dishes,];
+let todoListHTML = ``;
+for(let i=0; i<todoList.length; i++){
+const todo = todoList[i];
+const html = `<p>${todo}</p>`;
+todoListHTML += html;
+}
+console.log(todoLlistHTML);
+*/
 const todoList = [{
   name: 'make dinner',
   dueDate: '2022-12-22'
