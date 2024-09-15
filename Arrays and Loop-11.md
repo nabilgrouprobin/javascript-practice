@@ -19,6 +19,9 @@
 - div doesn't have default styling but paragraph has
 - arrays and loops
 - 1. save the data 2. generate the HTML 3.make it interactive
+- by default align-items: stretch; but if mother class in center then it will automatically center
+- we can group two or more values together by object or object inside an array
+- stretch in align-items is align items vertically stretch
 ```html
 <!DOCTYPE html>
 <html>
@@ -235,7 +238,15 @@ body {
 let todoListHTML = ``;
 for(let i=0; i<todoList.length; i++){
 const todo = todoList[i];
-const html = `<p>${todo}</p>`;
+const html = `
+<p>
+  ${todo}
+  <button onclick="
+    todoList.splice(${i},1);
+    renderTodoList();
+  ">Delete</button>
+</p>
+`;
 todoListHTML += html;
 }
 console.log(todoLlistHTML);
@@ -254,10 +265,23 @@ function renderTodoList() {
   let todoListHTML = '';
 
   for (let i = 0; i < todoList.length; i++) {
+    // const todo = todoList[i];
     const todoObject = todoList[i];
     //const name = todoObject.name;
     //const dueDate = todoObject.dueDate;
+    // destructuring variable name == property name
     const { name, dueDate } = todoObject;
+    /*
+    const html = `
+    <p>
+      ${name} ${dueDate}
+      <button onclick="
+          todoList.splice(${i}, 1);
+          renderTodoList();
+      ">Delete</button>
+    </p>
+    `;
+    */
     const html = `
       <div>${name}</div>
       <div>${dueDate}</div>
@@ -268,6 +292,8 @@ function renderTodoList() {
     `;
     todoListHTML += html;
   }
+
+  // console.log(todoListHTML)
 
   document.querySelector('.js-todo-list')
     .innerHTML = todoListHTML;
@@ -280,12 +306,19 @@ function addTodo() {
   const dateInputElement = document.querySelector('.js-due-date-input');
   const dueDate = dateInputElement.value;
 
+  /*
+  todoList.push(name);
+  console.log(todoList);
+  */
+
   todoList.push({
     //name: name,
     //dueDate: dueDate,
+    //shorthand property  property = variable name
     name,
     dueDate
   });
+  //console.log(todoList);
 
   inputElement.value = '';
 
