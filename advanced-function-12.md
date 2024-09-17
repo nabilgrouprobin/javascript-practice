@@ -41,6 +41,22 @@
 - we can remove event listener by removeEventListener()
 - But removeEventListener() must have the exact funtion that addEventListener() have
 - for this reason we save the funtion in a variable first then in funtion parameter we just put the     same variable
+- if we want to use keyboard event listener == document.body.addEventListener('keydown' (event)=>{
+   console.log(event.key);});
+- addEventListener() also provide 'event' object but it provide this as a parameter
+- in order to addEventListenr() we need to add the html first (by js)
+- if we select all element = document.querySelectorAll('.class-name')
+  it gives us a list just like an array
+- .filter(value, index)
+    1. creates new array[]
+    2. return true, put value in array
+    3. return false, not put value in array
+- .map(value, index)
+    1. creates a new array
+    2. return , add in new array
+    3. transform an array into another array
+- if a function has access to a value -> it wil always have access to that value
+  value gets packaged together (enclosed) with the function
 ```html
 <!DOCTYPE html>
 <html>
