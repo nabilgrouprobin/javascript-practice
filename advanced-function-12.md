@@ -18,6 +18,8 @@
 - setInterval(function(){console.log('interval');}, 3000); // it also asynchronous
 - setInterval() returns a number = we can use that numbr to stop the interval
 - clearInterval(intervalID) = to stop the setInterval()
+- .forEach(function(value, index){})
+- forEach() method won't provide the loop term 'continue'
 ```html
 <!DOCTYPE html>
 <html>
@@ -123,8 +125,10 @@
         'wash dishes',
         'watch youtube'
       ].forEach((value, index) => {
+        // console.log(index);
+        // console.log(value);
         if (value === 'wash dishes') {
-          return;
+          return; // end this function early
         }
 
         console.log(index);
