@@ -22,6 +22,25 @@
 - forEach() method won't provide the loop term 'continue'
 - in forEach() method return = continue || forEach() method doesn't have break
 - if we need to use break in forEach() then it is better to use a regular for loop
+- Arrow function
+- Arrow functions have shorcuts
+- if one parameter in arrow function then parenthisis(round bracket) is optional
+- if one line code only inside arrow funtion body then  1. put the code in oneline 2.curly bracket is   optional 3.return keyword is optional
+- passing a function into another function ==>> use  arrow funtion
+- regular funtion in initial funtion provides 1. easier to read 2. hoisting
+- hoisting = call this function before it is created
+- uses of arrow funtion
+  1. funtion into another funtion
+  2. inside an object but it is better that we also shorthand method
+  3. inside addEventListener() method or other method
+- we use addEventListener() rather than using onclick = "" attribute
+- every HTML element has a method called addEventListener() = let us run some code when we interact     with the element
+- addEventListener has some benifits
+    1. add multiple event listeners for an event
+    2. remove listener from an event
+- we can remove event listener by removeEventListener()
+- But removeEventListener() must have the exact funtion that addEventListener() have
+- for this reason we save the funtion in a variable first then in funtion parameter we just put the     same variable
 ```html
 <!DOCTYPE html>
 <html>
@@ -141,12 +160,13 @@
         console.log('hello');
         return 5;
       };
+      regularFuntion(2,3);
 
       const arrowFunction = (param, param2) => {
         console.log('hello');
         return 5;
       };
-      arrowFunction();
+      arrowFunction(2,3);
 
       const oneParam = param => {
         console.log(param + 1);
@@ -160,7 +180,7 @@
         method: () => {
 
         },
-        method() {
+        method() { // shorthand method
 
         }
       };
