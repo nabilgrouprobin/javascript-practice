@@ -20,6 +20,8 @@
 - clearInterval(intervalID) = to stop the setInterval()
 - .forEach(function(value, index){})
 - forEach() method won't provide the loop term 'continue'
+- in forEach() method return = continue || forEach() method doesn't have break
+- if we need to use break in forEach() then it is better to use a regular for loop
 ```html
 <!DOCTYPE html>
 <html>
